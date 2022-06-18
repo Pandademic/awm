@@ -26,3 +26,4 @@ This is the current roadmap:
       - bar functionality
     - extra doc's
     - extenability support
+    - start of `libawm` to make support easier
