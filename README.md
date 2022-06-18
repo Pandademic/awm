@@ -22,7 +22,7 @@ This is the current roadmap:
     - configuration
   - basic doc's
   
-- first iteration - relase 1(`v0-i1`):
+- first iteration - relase 1(`v1-i1`):
     - more utilitys:
       - lock functionality
       - bar functionality
