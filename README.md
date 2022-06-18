@@ -19,13 +19,13 @@ This is the current roadmap:
   - basic working functionality: 
     - tiling
     - keybinds
-    - configuration
   - basic doc's
   
 - first iteration - relase 1(`v1-i1`):
     - more utilitys:
       - lock functionality
       - bar functionality
+      - configuration
     - extra doc's
     - extenability support
     - start of `libawm` to make support easier
