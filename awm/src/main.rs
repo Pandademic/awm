@@ -16,7 +16,7 @@ use penrose::{
         Color,
     },
     logging_error_handler,
-    xcb::new_xcb_backed_window_manager,
+    //xcb::new_xcb_backed_window_manager,
     Backward, Forward, Less, More, Selector
 };
 
@@ -34,8 +34,8 @@ fn main() -> penrose::Result<()> {
         .builder()
         .show_bar(false)
         .top_bar(false)
-        .layouts(vec![side_stack_layout])
-        .focused_border(colors::PURPLE)?
+        .layouts(vec![side_stack])
+        .focused_border(Color::PURPLE)?
         .gap_px(5)
         .build()
         .expect("could not build config!!!");
