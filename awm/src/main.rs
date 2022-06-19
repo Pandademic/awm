@@ -12,12 +12,19 @@ use penrose::{
             side_stack,
         },
     },
+    draw::{
+        Color,
+    },
     logging_error_handler,
-    xcb::new_xcb_backed_winow_manager,
+    xcb::new_xcb_backed_window_manager,
     Backward, Forward, Less, More, Selector
 };
 
+use penrose::new_xcb_backed_window_manager;
 use simplelog::{LevelFilter, SimpleLogger};
+
+pub const TERMINAL: &str = "st";
+pub const LAUNCHER: &str = "dmenu_run";
 
 fn main() -> penrose::Result<()> {
     if let Err(e) = SimpleLogger::init(LevelFilter::Info, simplelog::Config::default()) {
@@ -69,7 +76,7 @@ fn main() -> penrose::Result<()> {
          };
     };
 
-    let mut wm = new_xcb_backed_window_manager(config, hooks, logging_error_handler())?;
+    let mut wm = xcb::new_xcb_backed_window_manager(config, hooks, logging_error_handler())?;
     wm.grab_keys_and_run(key_bindings, map!{})
 
 
