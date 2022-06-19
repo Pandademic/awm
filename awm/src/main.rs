@@ -47,7 +47,7 @@ fn main() -> penrose::Result<()> {
         "M-Return" => run_external!(TERMINAL);
 
         // Exit Penrose (important to remember this one!)
-        "C-M-Backspace" => run_internal!(exit);
+        "C-M" => run_internal!(exit);
 
         // client management
         "M-j" => run_internal!(cycle_client, Forward);
@@ -76,7 +76,7 @@ fn main() -> penrose::Result<()> {
          };
     };
 
-    let mut wm = xcb::new_xcb_backed_window_manager(config, hooks, logging_error_handler())?;
+    let mut wm = penrose::new_xcb_backed_window_manager(config, hooks, logging_error_handler())?;
     wm.grab_keys_and_run(key_bindings, map!{})
 
 
