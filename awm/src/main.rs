@@ -1,7 +1,7 @@
 #[macro_use]
-extern crate penrose;
+extern crate libawm;
 
-use penrose::{
+use libawm::{
     core::{
         bindings::KeyEventHandler,
         config::Config,
@@ -21,7 +21,7 @@ const TERMINAL: &str = "alacritty";
 const LAUNCHER: &str = "dmenu_run";
 
 
-fn main() -> penrose::Result<()> {
+fn main() -> libawm::Result<()> {
     // Initialise the logger (use LevelFilter::Debug to enable debug logging)
     if let Err(e) = SimpleLogger::init(LevelFilter::Info, simplelog::Config::default()) {
         panic!("unable to set log level: {}", e);

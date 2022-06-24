@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-penrose = "0.2"
+libawm = "0.1"
 simplelog = "0.8"
