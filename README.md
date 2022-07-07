@@ -6,10 +6,7 @@
 
 awm is a dynamic window manger, made by me.
 
-The core is in rust(libawm - forked from [penrose](https://github.com/sminez/penrose)).
-
-The rest will be in go
-
+It's is in rust(libawm - forked from [penrose](https://github.com/sminez/penrose)).
 
 <h1>ROADMAP</h1>
 This is the current roadmap:
